@@ -7,7 +7,7 @@ namespace BasicCalculator
             InitializeComponent();
         }
 
-        private void calculateButton_Click(object sender, EventArgs e)
+        private void CalculateButton_Click(object sender, EventArgs e)
         {
             decimal operand1 = Convert.ToDecimal(operand1Textbox.Text);
             decimal operand2 = Convert.ToDecimal(operand2Textbox.Text);

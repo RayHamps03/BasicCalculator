@@ -93,7 +93,7 @@
             calculateButton.TabIndex = 6;
             calculateButton.Text = "Calculate";
             calculateButton.UseVisualStyleBackColor = true;
-            calculateButton.Click += calculateButton_Click;
+            calculateButton.Click += CalculateButton_Click;
             // 
             // Form1
             // 

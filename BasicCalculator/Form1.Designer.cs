@@ -28,84 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            label2 = new Label();
-            textBox2 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            this.operand1Label = new Label();
+            this.operand1Textbox = new TextBox();
+            this.operand2Label = new Label();
+            this.operand2Textbox = new TextBox();
+            this.operatorLabel = new Label();
+            this.operatorTextbox = new TextBox();
+            calculateButton = new Button();
             SuspendLayout();
             // 
-            // label1
+            // operand1Label
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(118, 95);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            this.operand1Label.AutoSize = true;
+            this.operand1Label.Location = new Point(118, 95);
+            this.operand1Label.Name = "operand1Label";
+            this.operand1Label.Size = new Size(65, 15);
+            this.operand1Label.TabIndex = 0;
+            this.operand1Label.Text = "Operand 1:";
             // 
-            // textBox1
+            // operand1Textbox
             // 
-            textBox1.Location = new Point(217, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            this.operand1Textbox.Location = new Point(217, 92);
+            this.operand1Textbox.Name = "operand1Textbox";
+            this.operand1Textbox.Size = new Size(100, 23);
+            this.operand1Textbox.TabIndex = 1;
             // 
-            // label2
+            // operand2Label
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(118, 166);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
+            this.operand2Label.AutoSize = true;
+            this.operand2Label.Location = new Point(118, 166);
+            this.operand2Label.Name = "operand2Label";
+            this.operand2Label.Size = new Size(65, 15);
+            this.operand2Label.TabIndex = 2;
+            this.operand2Label.Text = "Operand 2:";
             // 
-            // textBox2
+            // operand2Textbox
             // 
-            textBox2.Location = new Point(217, 163);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            this.operand2Textbox.Location = new Point(217, 163);
+            this.operand2Textbox.Name = "operand2Textbox";
+            this.operand2Textbox.Size = new Size(100, 23);
+            this.operand2Textbox.TabIndex = 3;
             // 
-            // label3
+            // operatorLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(118, 236);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 4;
-            label3.Text = "label3";
+            this.operatorLabel.AutoSize = true;
+            this.operatorLabel.Location = new Point(118, 236);
+            this.operatorLabel.Name = "operatorLabel";
+            this.operatorLabel.Size = new Size(57, 15);
+            this.operatorLabel.TabIndex = 4;
+            this.operatorLabel.Text = "Operator:";
             // 
-            // textBox3
+            // operatorTextbox
             // 
-            textBox3.Location = new Point(217, 233);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            this.operatorTextbox.Location = new Point(217, 233);
+            this.operatorTextbox.Name = "operatorTextbox";
+            this.operatorTextbox.Size = new Size(100, 23);
+            this.operatorTextbox.TabIndex = 5;
             // 
-            // button1
+            // calculateButton
             // 
-            button1.Location = new Point(118, 287);
-            button1.Name = "button1";
-            button1.Size = new Size(199, 49);
-            button1.TabIndex = 6;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            calculateButton.Location = new Point(118, 287);
+            calculateButton.Name = "calculateButton";
+            calculateButton.Size = new Size(199, 49);
+            calculateButton.TabIndex = 6;
+            calculateButton.Text = "Calculate";
+            calculateButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(426, 445);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Controls.Add(calculateButton);
+            Controls.Add(this.operatorTextbox);
+            Controls.Add(this.operatorLabel);
+            Controls.Add(this.operand2Textbox);
+            Controls.Add(this.operand2Label);
+            Controls.Add(this.operand1Textbox);
+            Controls.Add(this.operand1Label);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -114,12 +114,12 @@
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private Label label2;
-        private TextBox textBox2;
-        private Label label3;
-        private TextBox textBox3;
-        private Button button1;
+        private Label operand1Label;
+        private TextBox operand1Textbox;
+        private Label operand2Label;
+        private TextBox operand2Textbox;
+        private Label operatorLabel;
+        private TextBox operatorTextbox;
+        private Button calculateButton;
     }
 }

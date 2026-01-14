@@ -28,62 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.operand1Label = new Label();
-            this.operand1Textbox = new TextBox();
-            this.operand2Label = new Label();
-            this.operand2Textbox = new TextBox();
-            this.operatorLabel = new Label();
-            this.operatorTextbox = new TextBox();
+            operand1Label = new Label();
+            operand1Textbox = new TextBox();
+            operand2Label = new Label();
+            operand2Textbox = new TextBox();
+            operatorLabel = new Label();
+            operatorTextbox = new TextBox();
             calculateButton = new Button();
             SuspendLayout();
             // 
             // operand1Label
             // 
-            this.operand1Label.AutoSize = true;
-            this.operand1Label.Location = new Point(118, 95);
-            this.operand1Label.Name = "operand1Label";
-            this.operand1Label.Size = new Size(65, 15);
-            this.operand1Label.TabIndex = 0;
-            this.operand1Label.Text = "Operand 1:";
+            operand1Label.AutoSize = true;
+            operand1Label.Location = new Point(118, 95);
+            operand1Label.Name = "operand1Label";
+            operand1Label.Size = new Size(65, 15);
+            operand1Label.TabIndex = 0;
+            operand1Label.Text = "Operand 1:";
             // 
             // operand1Textbox
             // 
-            this.operand1Textbox.Location = new Point(217, 92);
-            this.operand1Textbox.Name = "operand1Textbox";
-            this.operand1Textbox.Size = new Size(100, 23);
-            this.operand1Textbox.TabIndex = 1;
+            operand1Textbox.Location = new Point(217, 92);
+            operand1Textbox.Name = "operand1Textbox";
+            operand1Textbox.Size = new Size(100, 23);
+            operand1Textbox.TabIndex = 1;
             // 
             // operand2Label
             // 
-            this.operand2Label.AutoSize = true;
-            this.operand2Label.Location = new Point(118, 166);
-            this.operand2Label.Name = "operand2Label";
-            this.operand2Label.Size = new Size(65, 15);
-            this.operand2Label.TabIndex = 2;
-            this.operand2Label.Text = "Operand 2:";
+            operand2Label.AutoSize = true;
+            operand2Label.Location = new Point(118, 166);
+            operand2Label.Name = "operand2Label";
+            operand2Label.Size = new Size(65, 15);
+            operand2Label.TabIndex = 2;
+            operand2Label.Text = "Operand 2:";
             // 
             // operand2Textbox
             // 
-            this.operand2Textbox.Location = new Point(217, 163);
-            this.operand2Textbox.Name = "operand2Textbox";
-            this.operand2Textbox.Size = new Size(100, 23);
-            this.operand2Textbox.TabIndex = 3;
+            operand2Textbox.Location = new Point(217, 163);
+            operand2Textbox.Name = "operand2Textbox";
+            operand2Textbox.Size = new Size(100, 23);
+            operand2Textbox.TabIndex = 3;
             // 
             // operatorLabel
             // 
-            this.operatorLabel.AutoSize = true;
-            this.operatorLabel.Location = new Point(118, 236);
-            this.operatorLabel.Name = "operatorLabel";
-            this.operatorLabel.Size = new Size(57, 15);
-            this.operatorLabel.TabIndex = 4;
-            this.operatorLabel.Text = "Operator:";
+            operatorLabel.AutoSize = true;
+            operatorLabel.Location = new Point(118, 236);
+            operatorLabel.Name = "operatorLabel";
+            operatorLabel.Size = new Size(57, 15);
+            operatorLabel.TabIndex = 4;
+            operatorLabel.Text = "Operator:";
             // 
             // operatorTextbox
             // 
-            this.operatorTextbox.Location = new Point(217, 233);
-            this.operatorTextbox.Name = "operatorTextbox";
-            this.operatorTextbox.Size = new Size(100, 23);
-            this.operatorTextbox.TabIndex = 5;
+            operatorTextbox.Location = new Point(217, 233);
+            operatorTextbox.Name = "operatorTextbox";
+            operatorTextbox.Size = new Size(100, 23);
+            operatorTextbox.TabIndex = 5;
             // 
             // calculateButton
             // 
@@ -93,6 +93,7 @@
             calculateButton.TabIndex = 6;
             calculateButton.Text = "Calculate";
             calculateButton.UseVisualStyleBackColor = true;
+            calculateButton.Click += calculateButton_Click;
             // 
             // Form1
             // 
@@ -100,12 +101,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(426, 445);
             Controls.Add(calculateButton);
-            Controls.Add(this.operatorTextbox);
-            Controls.Add(this.operatorLabel);
-            Controls.Add(this.operand2Textbox);
-            Controls.Add(this.operand2Label);
-            Controls.Add(this.operand1Textbox);
-            Controls.Add(this.operand1Label);
+            Controls.Add(operatorTextbox);
+            Controls.Add(operatorLabel);
+            Controls.Add(operand2Textbox);
+            Controls.Add(operand2Label);
+            Controls.Add(operand1Textbox);
+            Controls.Add(operand1Label);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);

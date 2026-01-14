@@ -9,11 +9,12 @@ namespace BasicCalculator
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
+            // Initialize variables
             decimal operand1;
             decimal operand2;
             string operatorSymbol;
 
-
+            // Assigns operand1 if textbox is filled and operand1 is decimal
             if (!IsEmpty(operand1Textbox.Text) && IsDecimal(operand1Textbox.Text))
             {
                 operand1 = Convert.ToDecimal(operand1Textbox.Text);
@@ -22,7 +23,7 @@ namespace BasicCalculator
             {
                 return;
             }
-
+            // Assigns operand2 if textbox is filled and operand2 is decimal
             if (!IsEmpty(operand2Textbox.Text) && IsDecimal(operand2Textbox.Text))
             { 
                 operand2 = Convert.ToDecimal(operand2Textbox.Text);
@@ -31,7 +32,7 @@ namespace BasicCalculator
             {
                 return;
             }
-
+            // Assigns operator if textbox is filled and operator is valid
             if (!IsEmpty(operatorTextbox.Text) && IsValidOperator(operatorTextbox.Text))
             {
                 operatorSymbol = operatorTextbox.Text;
@@ -41,8 +42,10 @@ namespace BasicCalculator
                 return;
             }
 
+            // Calculates the two numbers based on user input
             decimal result = Calculate(operand1, operand2, operatorSymbol);
 
+            // Determines if zero division occurs, and displays results if it does not occur
             if (NotZeroDivisor(operand2, operatorSymbol))
             {
                 MessageBox.Show("Result: " + result.ToString());
@@ -54,6 +57,13 @@ namespace BasicCalculator
             
         }
 
+        /// <summary>
+        /// Performs basic arithmetic operation based on inputted operator symbol
+        /// </summary>
+        /// <param name="op1"></param>
+        /// <param name="op2"></param>
+        /// <param name="opSymbol"></param>
+        /// <returns></returns>
         private decimal Calculate(decimal op1, decimal op2, string opSymbol)
         {
             if (opSymbol == "+")
@@ -80,6 +90,12 @@ namespace BasicCalculator
 
         }
 
+        /// <summary>
+        /// Input validation to check if textboxes are empty or not. Returns true if so,
+        /// and false otherwise
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private bool IsEmpty(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -90,6 +106,12 @@ namespace BasicCalculator
             return false;
         }
 
+        /// <summary>
+        /// Input validation for operator variable to check if it is a valid operator(+, -, /, *).
+        /// Returns true if so and false otherwise
+        /// </summary>
+        /// <param name="opSymbol"></param>
+        /// <returns></returns>
         private bool IsValidOperator(string opSymbol)
         {
             if (opSymbol == "+" || opSymbol == "-" || opSymbol == "*" || opSymbol == "/") {
@@ -99,6 +121,12 @@ namespace BasicCalculator
             return false;
         }
 
+        /// <summary>
+        /// Input validation for operands to check if it is a valid decimal value.
+        /// Returns true if so and false otherwise
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         private bool IsDecimal(string input)
         {
             if (decimal.TryParse(input, out decimal result))
@@ -109,6 +137,13 @@ namespace BasicCalculator
             return false;
         }
 
+        /// <summary>
+        /// Input validation if operand2 variable is zero and operator is "/" to check
+        /// if the program divides by zero. Returns true if so and false otherwise
+        /// </summary>
+        /// <param name="op2"></param>
+        /// <param name="opSymbol"></param>
+        /// <returns></returns>
         private bool NotZeroDivisor(decimal op2, string opSymbol)
         {
             if (op2 == 0 && opSymbol == "/")
